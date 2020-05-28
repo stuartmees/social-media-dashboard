@@ -1,0 +1,73 @@
+// a component can be an article, a section in an article, or a div or even a Component in React and can have more then one class name selector in it.
+
+
+.followers {
+    display: grid;
+    grid-template-columns: auto;
+
+    .item {
+        font-size: $text-main-size;
+        background-color: grey;
+        margin: 10px 0 10px 0;
+        border-radius: 5px;
+        
+        &.facebook {
+            border-top: solid 5px $facebook-color;
+        }
+    
+        &.youtube {
+            border-top: solid 5px $youtube-color;
+        }
+    
+        &.twitter {
+            border-top: solid 5px $twitter-color;
+        }
+    
+        &.instagram {
+            border-width: 0;
+            border-top: solid 5px;
+            border-image: $instagram-color 0 100%;
+        }
+
+        // border-left: 10px solid;
+        // border-image: linear-gradient(#00f, #000) 0 100%;
+    }
+
+
+        .item__header {
+            img {
+                padding:9px;
+            }
+        }
+
+        .item__header, .item__change {
+            margin: 22px 0 22px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .item__count {
+
+            div {
+                color: $text-emphasis-color;
+                font-size: $text-largest-size;
+            }
+
+            h1 {
+                font-weight: $text-light-weight;
+                font-size: $text-main-size;
+                text-align: center;
+                letter-spacing: $text-wide-space;
+            }
+        }
+    
+        .change--up {
+            color: $green;
+        }
+        
+        .change--down {
+            color: $red;
+        }
+    }
+
+

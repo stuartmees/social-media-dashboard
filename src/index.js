@@ -8,10 +8,11 @@ import { getFollowersList } from './js/components/followersList';
 const followersArray = []
 const overviewArray = []
 
-const buildItem = (platform, item) => (
+const buildItem = (userName, platform, item) => (
     {
+        userName: userName,
         platform: platform,
-        text: item.text,
+        description: item.description,
         count: item.count,
         change: item.change,
     }
@@ -19,23 +20,28 @@ const buildItem = (platform, item) => (
 
 userData.platformData.forEach((platformItem) => {
 
-    const platform = platformItem.platform
+    const platform = platformItem.platform;
+    const userName = platformItem.username;
 
-    const followersItem = buildItem(platform, platformItem.followers)
+    const followersItem = buildItem(userName, platform, platformItem.followers)
     
     followersArray.push(followersItem)
 
     platformItem.dayOverview.forEach(item => {
 
-        const overviewItem = buildItem(platform, item)
+        const overviewItem = buildItem(userName, platform, item)
 
         overviewArray.push(overviewItem)
     })
 });
 
-const followersElement = document.getElementsByClassName('followers')[0]
+console.log(followersArray);
+console.log(overviewArray);
+
+const followersSection = document.getElementsByClassName('followers')[0]
+const main = document.getElementsByTagName("main")[0];
 const followersList = getFollowersList(followersArray);
-followersElement.appendChild(followersList)
+main.appendChild(followersList)
 
 
 

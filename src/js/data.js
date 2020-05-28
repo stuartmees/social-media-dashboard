@@ -5,17 +5,17 @@ const facebookObj = {
 
     followers: {
         count: 1987,
-        text: 'FOLLOWERS',
+        description: 'FOLLOWERS',
         change: 12
     },
 
     dayOverview: [{
         count: 87,
-        text: 'Page Views',
+        description: 'Page Views',
         change: 3
     },{
         count: 52,
-        text: 'Likes',
+        description: 'Likes',
         change: -2
     }]
 }
@@ -27,17 +27,17 @@ const twitterObj = {
 
     followers: {
         count: 1044,
-        text: 'FOLLOWERS',
+        description: 'FOLLOWERS',
         change: 99
     },
 
     dayOverview: [{
         count: 117, 
-        text: 'Retweets',
+        description: 'Retweets',
         change: 303
     },{
         count: 507,
-        text: 'Likes',
+        description: 'Likes',
         change: 553
     }]
 }
@@ -49,17 +49,17 @@ const instagramObj = {
 
     followers: {
         count: 11000,
-        text: 'FOLLOWERS',
+        description: 'FOLLOWERS',
         change: 1099
     },
 
     dayOverview: [{
         count: 5462, 
-        text: 'Likes',
+        description: 'Likes',
         change: 2257
     },{
         count: 52000,
-        text: 'Profile Views',
+        description: 'Profile Views',
         change: 1375
     }]
 }
@@ -71,17 +71,17 @@ const youtubeObj = {
 
     followers: {
         count: 8239,
-        text: 'SUBSCRIBERS',
+        description: 'SUBSCRIBERS',
         change: -144
     },
 
     dayOverview: [{
         count: 107, 
-        text: 'Likes',
+        description: 'Likes',
         change: -19
     },{
         count: 1407,
-        text: 'Total Views',
+        description: 'Total Views',
         change: -12
     }]
 }

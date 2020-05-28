@@ -1,17 +1,18 @@
-export const getFollowersList = (followersArray) => {
-    
-    const followersListFrag = document.createDocumentFragment();
+import { getItem } from './item'
+
+const followersList = document.createElement('section');
+followersList.className = 'followers';
+
+export function getFollowersList(followersArray) {
+    let followersListInnerHTML = ''
 
     followersArray.forEach(item => {
-
-        const followersItem = document.createElement('article');
-        const text = document.createTextNode(item.platform + ': ' + item.count);
-
-        followersItem.appendChild(text);
-
-        followersListFrag.appendChild(followersItem);
+        const followersItem = getItem(item);
+        followersListInnerHTML += followersItem;
     });
+    
+    followersList.innerHTML = followersListInnerHTML;
 
-    return followersListFrag;
+    return followersList;
 };
 
