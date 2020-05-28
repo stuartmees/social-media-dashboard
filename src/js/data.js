@@ -86,10 +86,12 @@ const youtubeObj = {
     }]
 }
 
-export const platformData = [facebookObj, twitterObj, instagramObj, youtubeObj]
+const platformData = [facebookObj, twitterObj, instagramObj, youtubeObj]
 
 export const userData = {
-    totalFollowors: 223004
+    userID: '1xbg6554ghjs8',
+    totalFollowors: 223004,
+    platformData: platformData
 }
 
 

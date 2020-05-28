@@ -1,27 +1,28 @@
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
-import { platformData, userData } from './js/data';
+import { userData } from './js/data';
+import { getFollowersList } from './js/components/followersList';
 
 
 const followersArray = []
 const overviewArray = []
 
-const buildItem = (platform, item) => {
-    return {
+const buildItem = (platform, item) => (
+    {
         platform: platform,
         text: item.text,
         count: item.count,
         change: item.change,
     }
-}
+);
 
-const appendDataToArray = (platformItem) => {
+userData.platformData.forEach((platformItem) => {
 
     const platform = platformItem.platform
 
     const followersItem = buildItem(platform, platformItem.followers)
-
+    
     followersArray.push(followersItem)
 
     platformItem.dayOverview.forEach(item => {
@@ -30,12 +31,14 @@ const appendDataToArray = (platformItem) => {
 
         overviewArray.push(overviewItem)
     })
-}
+});
 
-platformData.forEach(appendDataToArray);
+const followersElement = document.getElementsByClassName('followers')[0]
+const followersList = getFollowersList(followersArray);
+followersElement.appendChild(followersList)
 
-console.log(followersArray);
-console.log(overviewArray);
+
+
 
 
 
