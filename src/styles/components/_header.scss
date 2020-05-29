@@ -1,10 +1,30 @@
 header {
     font-size: $header-small-size;
 
+    .dash-header__toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    
     .button-toggle {
 
         &.dark {
             transform: rotate(180deg);
+
+            path {
+                fill: url(#grad1);
+            }
+            
+        }
+        
+        path {
+            fill: hsl(230, 22%, 74%);
+
+            &:hover {
+                fill: url(#grad1);
+            }
         }
     }
 

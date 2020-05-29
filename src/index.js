@@ -36,16 +36,22 @@ userData.platformData.forEach((platformItem) => {
     })
 });
 
-// const buttonToggle = document.getElementsByClassName('button-toggle')[0];
-// const buttonTogglePath = document.querySelector('.button-toggle path')
-// // // const buttonToggleX = document.getElementsByClassName('dash-header__toggle')[0];
+const buttonToggle = document.getElementsByClassName('button-toggle')[0];
+const buttonTogglePath = document.querySelector('.button-toggle path')
+// // const buttonToggleX = document.getElementsByClassName('dash-header__toggle')[0];
 
-// console.log(buttonToggle)
+console.log(buttonToggle)
 
-// buttonToggle.addEventListener('click', () => {
-//     console.log('toggle clicked')
-//     darkTheme = !darkTheme
-// })
+buttonToggle.addEventListener('click', () => {
+    console.log('toggle clicked')
+    darkTheme = !darkTheme
+
+    if (darkTheme) {
+        buttonToggle.classList.add('dark')
+    } else if (!darkTheme) {
+        buttonToggle.classList.remove('dark')
+    }
+});
 
 
 // NOW ADD LOGIC THAT APPLIES DARK CLASS TO SVG APPROPRIATELY
