@@ -1,6 +1,12 @@
 header {
     font-size: $header-small-size;
 
+
+    .dash-header__rule {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
     .dash-header__toggle {
         display: flex;
         justify-content: space-between;
@@ -16,7 +22,6 @@ header {
             path {
                 fill: url(#grad1);
             }
-            
         }
         
         path {

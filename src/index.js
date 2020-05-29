@@ -2,7 +2,7 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
 import { userData } from './js/data';
-import { getFollowersList } from './js/components/followersList';
+import { getList } from './js/components/list';
 
 
 const followersArray = [];
@@ -38,12 +38,9 @@ userData.platformData.forEach((platformItem) => {
 
 const buttonToggle = document.getElementsByClassName('button-toggle')[0];
 const buttonTogglePath = document.querySelector('.button-toggle path')
-// // const buttonToggleX = document.getElementsByClassName('dash-header__toggle')[0];
-
-console.log(buttonToggle)
 
 buttonToggle.addEventListener('click', () => {
-    console.log('toggle clicked')
+
     darkTheme = !darkTheme
 
     if (darkTheme) {
@@ -54,17 +51,17 @@ buttonToggle.addEventListener('click', () => {
 });
 
 
-// NOW ADD LOGIC THAT APPLIES DARK CLASS TO SVG APPROPRIATELY
-// THEN ADD LOGIC THAT CHANGES THE FILL ATTRIBUTE ON HOVER
-
 const totalFollowersSpan = document.querySelector('.dash-header__title span')
 const main = document.getElementsByTagName("main")[0];
 
-const followersList = getFollowersList(followersArray);
+const followersList = getList(followersArray, 'followers');
 const totalFollowers = userData.totalFollowers;
 
+const overviewList = getList(overviewArray, 'overview');
+
 totalFollowersSpan.innerHTML = totalFollowers;
-main.appendChild(followersList)
+main.appendChild(followersList);
+main.appendChild(overviewList);
 
 
 

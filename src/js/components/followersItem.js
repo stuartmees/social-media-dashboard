@@ -1,4 +1,4 @@
-export const getItem = (item) => {
+export const getFollowersItem = (item) => {
 
     const delta = item.change > 0 ? 'up' : 'down';
     const count = item.count%1000 === 0 ? `${item.count/1000}k` : item.count
