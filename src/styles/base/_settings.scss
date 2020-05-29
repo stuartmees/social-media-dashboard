@@ -17,7 +17,12 @@ $item-background-color: hsl(227, 47%, 96%);
 $text-main-color: hsl(228, 12%, 44%);
 $text-emphasis-color: hsl(230, 17%, 14%);
 
+$toggle-grad-color: linear-gradient(to right, hsl(210, 78%, 56%),hsl(146, 68%, 55%));
+
 // font sizes
+$header-small-size: 14px; 
+$header-large-size: 24px;  
+
 $text-main-size: 12px;
 $text-largest-size: 52px;
 

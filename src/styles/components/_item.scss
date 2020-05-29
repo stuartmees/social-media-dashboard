@@ -4,55 +4,54 @@
 .followers {
     display: grid;
     grid-template-columns: auto;
-
+    
     .item {
         font-size: $text-main-size;
-        background-color: grey;
         margin: 10px 0 10px 0;
         border-radius: 5px;
+        padding-top: 5px;
         
         &.facebook {
-            border-top: solid 5px $facebook-color;
+            background-color: $facebook-color;
         }
     
         &.youtube {
-            border-top: solid 5px $youtube-color;
+            background-color: $youtube-color;
         }
     
         &.twitter {
-            border-top: solid 5px $twitter-color;
+            background-color: $twitter-color;
         }
     
         &.instagram {
-            border-width: 0;
-            border-top: solid 5px;
-            border-image: $instagram-color 0 100%;
+            background: $instagram-color;
         }
 
-        // border-left: 10px solid;
-        // border-image: linear-gradient(#00f, #000) 0 100%;
-    }
-
+        .item__inner {
+            background-color: grey;
+            background-origin: padding-box;
+            border-radius: 0 0 5px 5px;
+        }
 
         .item__header {
             img {
                 padding:9px;
             }
         }
-
+    
         .item__header, .item__change {
             margin: 22px 0 22px 0;
             display: flex;
             align-items: center;
         }
-
+    
         .item__count {
-
+    
             div {
                 color: $text-emphasis-color;
                 font-size: $text-largest-size;
             }
-
+    
             h1 {
                 font-weight: $text-light-weight;
                 font-size: $text-main-size;
@@ -69,5 +68,6 @@
             color: $red;
         }
     }
+}
 
 
