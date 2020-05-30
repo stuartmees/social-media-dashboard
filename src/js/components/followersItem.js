@@ -7,10 +7,10 @@ export const getFollowersItem = (item) => {
     const itemHTML = 
         `<article class="item ${item.platform}">
             <div class="item__inner flex-center-column">
-                <header class="item__header">
+                <section class="item__platform">
                     <img src="/assets/images/icon-${item.platform}.svg"></span>
                     <span>${item.userName}</span>
-                </header>
+                </section>
                 <section class="item__count flex-center-column">
                     <div>${count}</div>
                     <h1>${item.description}</h1>

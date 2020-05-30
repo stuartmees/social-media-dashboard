@@ -5,8 +5,9 @@ import { getOverviewItem } from './overviewItem'
 export function getList(dataArray, listType) {
     
     const list = document.createElement('section');
-    list.className = listType;
+    list.className = `${listType} list__grid`;
 
+    
     let listInnerHTML = ''
 
     if (listType === 'followers') {

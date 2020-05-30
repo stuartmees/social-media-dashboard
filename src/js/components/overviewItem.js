@@ -6,12 +6,18 @@ export const getOverviewItem = (item) => {
 
     const itemHTML = 
         `<article class="item ${item.platform}">
-                <h2>${item.description}</h2>
-                <img src="/assets/images/icon-${item.platform}.svg"></span>
+                <div class="item__description">
+                    <h2>${item.description}</h2>
+                </div>
+                <div class="item__platform">
+                    <img src="/assets/images/icon-${item.platform}.svg"></span>
+                </div>
                 <div class="item__count">${count}</div>
-                <section class="item__change change--${delta}">
-                    <img src="/assets/images/icon-${delta}.svg"></img>${change}%
-                </section>
+                <div class="item__change change--${delta}">
+                    <div>
+                        <img src="/assets/images/icon-${delta}.svg"></img>${change}%
+                    </div>
+                </div>
         </article>`
     
     return itemHTML;

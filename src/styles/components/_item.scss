@@ -1,14 +1,15 @@
 // a component can be an article, a section in an article, or a div or even a Component in React and can have more then one class name selector in it.
 
+.item {
+    font-size: $text-main-size;
+    border-radius: 5px;
+}
+
 
 .followers {
-    display: grid;
-    grid-template-columns: auto;
     
     .item {
-        font-size: $text-main-size;
-        margin: 10px 0 10px 0;
-        border-radius: 5px;
+        // font-size: $text-main-size;
         padding-top: 5px;
         
         &.facebook {
@@ -33,13 +34,13 @@
             border-radius: 0 0 5px 5px;
         }
 
-        .item__header {
+        .item__platform {
             img {
                 padding:9px;
             }
         }
     
-        .item__header, .item__change {
+        .item__platform, .item__change {
             margin: 22px 0 22px 0;
             display: flex;
             align-items: center;
@@ -71,31 +72,49 @@
 }
 
 .overview {
-    display: grid;
-    grid-template-columns: auto;
     
     .item {
-        font-size: $text-main-size;
-        margin: 10px 0 10px 0;
-        border-radius: 5px;
-        background-color: grey;
+
         display: grid;
         grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        background-color: grey;
+        padding: 20px;
 
-        h2 {
-            font-size: $text-main-size;
-        }
-
-        .item__change {
+        div {
             display: flex;
-            align-items: center;
+            // align-items: start;
+
+
         }
-    
+
+        .item__description {
+            background-color:red;
+
+            h2 {
+                font-size: $text-main-size;
+                margin: 0px;
+            }
+        }
+  
         .item__count {
             font-size: $header-large-size;
             color: $text-emphasis-color;
+            background-color:red;
         }
-    
+
+        .item__change {
+            background-color:white;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        .item__platform {
+            background-color:red;
+            align-items: start; 
+            flex-direction: row-reverse;
+        }
+
         .change--up {
             color: $green;
         }
