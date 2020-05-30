@@ -5,7 +5,7 @@ import { getOverviewItem } from './overviewItem'
 export function getList(dataArray, listType) {
     
     const list = document.createElement('section');
-    list.className = `${listType} list__grid`;
+    list.className = `list ${listType} list__grid`;
 
     
     let listInnerHTML = ''
@@ -18,6 +18,7 @@ export function getList(dataArray, listType) {
     };
 
     if (listType === 'overview') {
+        listInnerHTML +=`<h2>Overview - Today</h2>`
         dataArray.forEach(item => {
             const itemHTML = getOverviewItem(item);
             listInnerHTML += itemHTML;

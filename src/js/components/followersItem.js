@@ -6,7 +6,7 @@ export const getFollowersItem = (item) => {
 
     const itemHTML = 
         `<article class="item ${item.platform}">
-            <div class="item__inner flex-center-column">
+            <div class="item__inner list__grid">
                 <section class="item__platform">
                     <img src="/assets/images/icon-${item.platform}.svg"></span>
                     <span>${item.userName}</span>

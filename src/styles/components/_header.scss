@@ -4,7 +4,7 @@ header {
 
     .dash-header__rule {
         margin-top: 25px;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
     }
 
     .dash-header__toggle {
@@ -37,11 +37,13 @@ header {
         h1 {
             color: $text-emphasis-color;
             font-size: $header-large-size;
-            margin: 0;
+            margin: 0 0 8px 0;
+
         }
 
         h2 {
             font-size: $header-small-size;
+            margin: 0;
         }
     }
 }

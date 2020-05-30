@@ -57,6 +57,7 @@ const main = document.getElementsByTagName("main")[0];
 const followersList = getList(followersArray, 'followers');
 const totalFollowers = userData.totalFollowers;
 
+
 const overviewList = getList(overviewArray, 'overview');
 
 totalFollowersSpan.innerHTML = totalFollowers;

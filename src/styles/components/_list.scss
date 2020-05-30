@@ -3,3 +3,10 @@
     grid-template-columns: auto;
     grid-row-gap: 15px;
 }
+
+.list {
+    margin-top: 25px;
+    h2 {
+        font-size: $header-large-size;
+    }
+}
