@@ -57,6 +57,8 @@ const main = document.getElementsByTagName("main")[0];
 const followersList = getList(followersArray, 'followers');
 const totalFollowers = userData.totalFollowers;
 
+// const overviewSection = document.createElement('section')
+// `<h2>Overview - Today</h2>`
 
 const overviewList = getList(overviewArray, 'overview');
 

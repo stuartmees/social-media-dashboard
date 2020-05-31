@@ -12,7 +12,9 @@ export const getOverviewItem = (item) => {
                 <div class="item__platform">
                     <img src="/assets/images/icon-${item.platform}.svg"></span>
                 </div>
-                <div class="item__count">${count}</div>
+                <div class="item__count">
+                    <div>${count}</div>
+                </div>
                 <div class="item__change change--${delta}">
                     <div>
                         <img src="/assets/images/icon-${delta}.svg"></img>${change}%

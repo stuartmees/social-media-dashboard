@@ -78,11 +78,11 @@
         display: grid;
         grid-template-columns: auto auto;
         grid-template-rows: 50% 50%;
-        grid-row-gap: 5px;
+        grid-row-gap: 10px;
         justify-content: space-between;
 
         background-color: grey;
-        padding: 20px;
+        padding: 25px 25px 25px 25px;
 
         div {
             display: flex;
@@ -90,21 +90,21 @@
 
         .item__description {
             h2 {
-                font-size: $text-main-size;
+                font-size: $header-small-size;
                 margin-top: 3px;
-                margin-bottom: 3px;
             }
         }
   
         .item__count {
-            font-size: $header-large-size;
+            font-size: $header-largest-size;
             color: $text-emphasis-color;
-            align-items: flex-end;
+            align-items: center;
+            padding-bottom: 3px;
         }
 
         .item__change {
             align-items: flex-end;
-            padding-bottom: 3px;
+            padding-bottom: 7px;
             div {
                 display: flex;
                 flex-direction: row;
@@ -117,7 +117,7 @@
         }
 
         .item__platform {
-            align-items: center; 
+            align-items: flex-start;
             justify-content: flex-end;
         }
     }

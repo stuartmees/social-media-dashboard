@@ -18,7 +18,6 @@ export function getList(dataArray, listType) {
     };
 
     if (listType === 'overview') {
-        listInnerHTML +=`<h2>Overview - Today</h2>`
         dataArray.forEach(item => {
             const itemHTML = getOverviewItem(item);
             listInnerHTML += itemHTML;
