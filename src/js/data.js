@@ -90,7 +90,7 @@ const platformData = [facebookObj, twitterObj, instagramObj, youtubeObj]
 
 export const userData = {
     userID: '1xbg6554ghjs8',
-    totalFollowers: 223004,
+    totalFollowers: '22,3004',
     platformData: platformData
 }
 

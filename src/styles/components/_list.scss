@@ -1,12 +1,35 @@
+.list {
+    margin-top: 35px;
+    h2 {
+        font-size: $header-medium-size;
+    }
+}
+
 .list__grid {
     display: grid;
     grid-template-columns: auto;
     grid-row-gap: 15px;
 }
 
-.list {
-    margin-top: 25px;
-    h2 {
-        font-size: $header-large-size;
+
+@media only screen and (min-width: 680px) {
+    .list__grid {
+        grid-template-columns: 48% 48%;
+        justify-content: space-between;
+    }
+
+    .overview {
+        margin-top: 50px;
+
+        .overview-list {
+            margin-top: 35px;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1300px) {
+    .list__grid {
+        grid-template-columns: 24% 24% 24% 24%;
     }
 }

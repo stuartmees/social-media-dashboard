@@ -2,26 +2,43 @@
 // define variables - themes the app.
 
 // colors
-$green: hsl(163, 72%, 41%);
-$red: hsl(356, 69%, 56%);
-$facebook-color: hsl(208, 92%, 53%);
-$twitter-color: hsl(203, 89%, 53%);
-$instagram-color: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
-$instagram-start-color: hsl(37, 97%, 70%);
-$instagram-end-color: hsl(329, 70%, 58%);
-$youtube-color: hsl(348, 97%, 39%);
+:root {
+    --green: hsl(163, 72%, 41%);
+    --red: hsl(356, 69%, 56%);
+    --facebook-color: hsl(208, 92%, 53%);
+    --twitter-color: hsl(203, 89%, 53%);
+    --instagram-color: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    --instagram-start-color: hsl(37, 97%, 70%);
+    --instagram-end-color: hsl(329, 70%, 58%);
+    --youtube-color: hsl(348, 97%, 39%);
+    
+    --main-background-color: hsl(0, 0%, 100%);
+    --header-background-color: hsl(225, 100%, 98%);
+    --item-background-color: hsl(227, 47%, 96%);
+    --text-main-color: hsl(228, 12%, 44%);
+    --text-emphasis-color: hsl(230, 17%, 14%);
 
-$main-background-color: hsl(0, 0%, 100%);
-$header-background-color: hsl(225, 100%, 98%);
-$item-background-color: hsl(227, 47%, 96%);
-$text-main-color: hsl(228, 12%, 44%);
-$text-emphasis-color: hsl(230, 17%, 14%);
+    --toggle-color:  hsl(230, 22%, 74%);
+}
 
-$toggle-grad-color: linear-gradient(to right, hsl(210, 78%, 56%),hsl(146, 68%, 55%));
+[theme="dark"] {
+    --main-background-color: hsl(230, 17%, 14%);
+    --header-background-color: hsl(232, 19%, 15%);
+    --item-background-color: hsl(228, 28%, 20%);
+    --text-main-color: hsl(228, 34%, 66%);
+    --text-emphasis-color: hsl(0, 0%, 100%);
+    --toggle-color: var(--text-main-color);
+}
+
+
+
+$toggle-color:  hsl(230, 22%, 74%);
+// $toggle-color: linear-gradient(to right, hsl(210, 78%, 56%),hsl(146, 68%, 55%));
 
 // font sizes
 $header-small-size: 14px; 
-$header-large-size: 26px; 
+$header-medium-size: 26px; 
+$header-large-size: 29px; 
 $header-largest-size: 32px;  
 
 $text-main-size: 12px;
@@ -33,3 +50,7 @@ $text-light-weight: 400;
 
 // text space
 $text-wide-space: 5px;
+
+// html[theme="light"] {
+//     $main-background-color: hsl(230, 17%, 14%)
+// }

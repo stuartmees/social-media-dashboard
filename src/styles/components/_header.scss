@@ -12,31 +12,40 @@ header {
         justify-content: space-between;
         align-items: center;
 
-    }
+        h2 {
+            color: var(--toggle-color);
+        }
+    };
     
     .button-toggle {
+
 
         &.dark {
             transform: rotate(180deg);
 
             path {
-                fill: url(#grad1);
+                fill: url(#grad);
+                
+                &:hover {
+                    fill: url(#grad);
+                }
             }
+
         }
         
         path {
-            fill: hsl(230, 22%, 74%);
+            fill:var(--toggle-color);
 
             &:hover {
-                fill: url(#grad1);
+                fill: url(#grad-hover);
             }
         }
     }
 
     section {
         h1 {
-            color: $text-emphasis-color;
-            font-size: $header-large-size;
+            color: var(--text-emphasis-color);
+            font-size: $header-medium-size;
             margin: 0 0 8px 0;
 
         }
@@ -44,6 +53,41 @@ header {
         h2 {
             font-size: $header-small-size;
             margin: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 680px) {
+    .dash-header {
+        .container {
+            display: flex;
+            justify-content: space-between;
+
+            
+            .dash-header__toggle {
+                h2 {
+                    margin-right: 15px;
+                }
+            }
+            
+        }
+    }
+    
+    .dash-header__rule {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .dash-header {
+        padding-top: 30px;
+        
+        .container {
+            section {
+                h1 {
+                    font-size: $header-largest-size;
+                }
+            }
         }
     }
 }

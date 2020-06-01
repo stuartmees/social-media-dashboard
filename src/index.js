@@ -36,6 +36,7 @@ userData.platformData.forEach((platformItem) => {
     })
 });
 
+const htmlElement = document.getElementsByTagName('html')[0]
 const buttonToggle = document.getElementsByClassName('button-toggle')[0];
 const buttonTogglePath = document.querySelector('.button-toggle path')
 
@@ -45,8 +46,10 @@ buttonToggle.addEventListener('click', () => {
 
     if (darkTheme) {
         buttonToggle.classList.add('dark')
+        htmlElement.setAttribute("theme", "dark");
     } else if (!darkTheme) {
         buttonToggle.classList.remove('dark')
+        htmlElement.setAttribute("theme", "light");
     }
 });
 
@@ -54,17 +57,18 @@ buttonToggle.addEventListener('click', () => {
 const totalFollowersSpan = document.querySelector('.dash-header__title span')
 const main = document.getElementsByTagName("main")[0];
 
-const followersList = getList(followersArray, 'followers');
+const followersSection = getList(followersArray, 'followers');
 const totalFollowers = userData.totalFollowers;
 
-// const overviewSection = document.createElement('section')
-// `<h2>Overview - Today</h2>`
-
+const overviewArticle = document.createElement('article');
+overviewArticle.classList += 'overview'
 const overviewList = getList(overviewArray, 'overview');
+overviewArticle.innerHTML = `<h2>Overview - Today</h2>`;
+overviewArticle.appendChild(overviewList);
 
 totalFollowersSpan.innerHTML = totalFollowers;
-main.appendChild(followersList);
-main.appendChild(overviewList);
+main.appendChild(followersSection);
+main.appendChild(overviewArticle);
 
 
 
