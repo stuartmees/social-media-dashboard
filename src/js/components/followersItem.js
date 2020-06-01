@@ -8,7 +8,7 @@ export const getFollowersItem = (item) => {
         `<article class="item ${item.platform}">
             <div class="item__inner flex-center-column">
                 <section class="item__platform">
-                    <img src="/assets/images/icon-${item.platform}.svg"></span>
+                    <img src="/assets/images/icon-${item.platform}.svg" alt="${item.platform} logo"></span>
                     <span>${item.userName}</span>
                 </section>
                 <section class="item__count flex-center-column">

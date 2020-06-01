@@ -10,7 +10,7 @@ export const getOverviewItem = (item) => {
                     <h2>${item.description}</h2>
                 </div>
                 <div class="item__platform">
-                    <img src="/assets/images/icon-${item.platform}.svg"></span>
+                    <img src="/assets/images/icon-${item.platform}.svg" alt="${item.platform} logo"></span>
                 </div>
                 <div class="item__count">
                     <div>${count}</div>

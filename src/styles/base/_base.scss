@@ -1,14 +1,25 @@
 // global styles
+.container {
+    
+    width: 90%;
+    max-width: 400px;
+    margin: 0px auto 50px auto;
+}
+.flex-center-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 html {
     color: var(--text-main-color);
     font-weight: $text-main-weight;
     background-color: var(--main-background-color);
-    height: 100vh;
 }
 
 body {
     font-family: 'Inter', sans-serif;
+        height: 100vh;
 }
 
 main {
@@ -16,22 +27,24 @@ main {
     bottom: 120px;
 }
 
-.container {
-    
-    width: 90%;
-    max-width: 400px;
-    margin: 0px auto 50px auto;
-}
-
 h1 {
     margin: 5px;
 }
 
-.flex-center-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.overview {
+    h1 {
+        font-size: $header-medium-size;
+    }
 }
+
+[theme="dark"] {
+    .overview {
+        h1 {
+            color: var(--text-emphasis-color);
+        }
+    }
+}
+
 
 @media only screen and (min-width: 680px) {
     .container {

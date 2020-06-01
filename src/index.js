@@ -9,6 +9,8 @@ const followersArray = [];
 const overviewArray = [];
 let darkTheme = false;
 
+
+// build the data arrays
 const buildItem = (userName, platform, item) => (
     {
         userName: userName,
@@ -36,9 +38,10 @@ userData.platformData.forEach((platformItem) => {
     })
 });
 
+
+// dark theme controls
 const htmlElement = document.getElementsByTagName('html')[0]
 const buttonToggle = document.getElementsByClassName('button-toggle')[0];
-const buttonTogglePath = document.querySelector('.button-toggle path')
 
 buttonToggle.addEventListener('click', () => {
 
@@ -53,20 +56,25 @@ buttonToggle.addEventListener('click', () => {
     }
 });
 
+// build and render components to the DOM
 
+// render total followers count to the DOM
 const totalFollowersSpan = document.querySelector('.dash-header__title span')
-const main = document.getElementsByTagName("main")[0];
+const totalFollowers = userData.totalFollowers;
+totalFollowersSpan.innerHTML = totalFollowers;
+
 
 const followersSection = getList(followersArray, 'followers');
-const totalFollowers = userData.totalFollowers;
 
+// build overview article
 const overviewArticle = document.createElement('article');
 overviewArticle.classList += 'overview'
 const overviewList = getList(overviewArray, 'overview');
-overviewArticle.innerHTML = `<h2>Overview - Today</h2>`;
+overviewArticle.innerHTML = `<h1>Overview - Today</h1>`;
 overviewArticle.appendChild(overviewList);
 
-totalFollowersSpan.innerHTML = totalFollowers;
+// render followers section and overview article to the DOM
+const main = document.getElementsByTagName("main")[0];
 main.appendChild(followersSection);
 main.appendChild(overviewArticle);
 

@@ -81,7 +81,6 @@
         grid-template-rows: 50% 50%;
         grid-row-gap: 10px;
         justify-content: space-between;
-
         background-color: var(--item-background-color);
         padding: 25px;
 
@@ -94,6 +93,11 @@
                 font-size: $header-small-size;
                 margin-top: 3px;
             }
+        }
+
+        .item__platform {
+            align-items: flex-start;
+            justify-content: flex-end;
         }
   
         .item__count {
@@ -117,10 +121,6 @@
             }
         }
 
-        .item__platform {
-            align-items: flex-start;
-            justify-content: flex-end;
-        }
     }
 }
 
@@ -131,7 +131,6 @@
             padding: 26px;
         }
     }
-
 }
 
 
