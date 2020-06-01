@@ -45,7 +45,7 @@
 
         .item__platform {
             img {
-                padding:9px;
+                padding-right:3px;
             }
         }
     
@@ -126,9 +126,9 @@
 
 
 @media only screen and (min-width: 680px) {
-    .overview {
+    .overview-list {
         .item {
-            padding: 35px;
+            padding: 26px;
         }
     }
 

@@ -3,12 +3,22 @@
     h2 {
         font-size: $header-medium-size;
     }
+
+
+}
+
+[theme="dark"] {
+    .overview {
+        h2 {
+            color: var(--text-emphasis-color);
+        }
+    }
 }
 
 .list__grid {
     display: grid;
     grid-template-columns: auto;
-    grid-row-gap: 15px;
+    grid-row-gap: 22px;
 }
 
 
@@ -25,11 +35,10 @@
             margin-top: 35px;
         }
     }
-
 }
 
 @media only screen and (min-width: 1300px) {
     .list__grid {
-        grid-template-columns: 24% 24% 24% 24%;
+        grid-template-columns: 23% 23% 23% 23%;
     }
 }

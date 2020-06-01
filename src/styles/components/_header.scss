@@ -1,10 +1,18 @@
 header {
+
+    background-color: var(----header-background-color);
+    padding-bottom: 60px;
+
     font-size: $header-small-size;
+
+    &.dash-header {
+        padding-top: 40px;
+    }
 
 
     .dash-header__rule {
         margin-top: 25px;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     .dash-header__toggle {
@@ -25,7 +33,7 @@ header {
 
             path {
                 fill: url(#grad);
-                
+
                 &:hover {
                     fill: url(#grad);
                 }
@@ -58,20 +66,30 @@ header {
 }
 
 @media only screen and (min-width: 680px) {
-    .dash-header {
-        .container {
-            display: flex;
-            justify-content: space-between;
+    
+    header {
 
-            
-            .dash-header__toggle {
-                h2 {
-                    margin-right: 15px;
+        &.dash-header{
+                padding-top: 60px;
+        }
+        
+        .dash-header {
+    
+            .container {
+                display: flex;
+                justify-content: space-between;
+    
+                
+                .dash-header__toggle {
+                    h2 {
+                        margin-right: 15px;
+                    }
                 }
+                
             }
-            
         }
     }
+
     
     .dash-header__rule {
         display: none;
@@ -80,7 +98,6 @@ header {
 
 @media only screen and (min-width: 1300px) {
     .dash-header {
-        padding-top: 30px;
         
         .container {
             section {

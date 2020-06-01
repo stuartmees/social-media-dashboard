@@ -4,17 +4,23 @@ html {
     color: var(--text-main-color);
     font-weight: $text-main-weight;
     background-color: var(--main-background-color);
+    height: 100vh;
 }
 
 body {
     font-family: 'Inter', sans-serif;
 }
 
+main {
+    position: relative;
+    bottom: 120px;
+}
+
 .container {
     
     width: 90%;
     max-width: 400px;
-    margin: 30px auto 50px auto;
+    margin: 0px auto 50px auto;
 }
 
 h1 {
