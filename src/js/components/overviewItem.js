@@ -17,7 +17,7 @@ export const getOverviewItem = (item) => {
                 </div>
                 <div class="item__change change--${delta}">
                     <div>
-                        <img src="./assets/images/icon-${delta}.svg"></img>${change}%
+                        <img src="./assets/images/icon-${delta}.svg" alt="${delta} arrow></img>${change}%
                     </div>
                 </div>
         </article>`
