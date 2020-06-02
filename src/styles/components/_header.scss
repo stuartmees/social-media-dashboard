@@ -1,6 +1,6 @@
 header {
 
-    background-color: var(----header-background-color);
+    background-color: var(--header-background-color);
     padding-bottom: 60px;
     font-size: $header-small-size;
 
@@ -72,7 +72,7 @@ header {
     header {
 
         &.dash-header{
-                padding-top: 60px;
+                padding-top: 45px;
         }
 
         &.dash-header {
