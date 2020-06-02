@@ -19,19 +19,18 @@
     --text-emphasis-color: hsl(230, 17%, 14%);
 
     --toggle-color:  hsl(230, 22%, 74%);
-
     --hr-color: var(--toggle-color)
 }
 
-[theme="dark"] {
+[data-theme="dark"] {
     --main-background-color: hsl(230, 17%, 14%);
     --header-background-color: hsl(232, 19%, 15%);
     --item-background-color: hsl(228, 28%, 20%);
     --text-main-color: hsl(228, 34%, 66%);
     --text-emphasis-color: hsl(0, 0%, 100%);
+    
     --toggle-color: var(--text-main-color);
     --hr-color: hsla(228, 34%, 66%, 0.2);
-
 }
 
 

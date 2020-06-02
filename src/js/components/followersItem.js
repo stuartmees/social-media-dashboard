@@ -7,18 +7,18 @@ export const getFollowersItem = (item) => {
     const itemHTML = 
         `<article class="item ${item.platform}">
             <div class="item__inner flex-center-column">
-                <section class="item__platform">
+                <div class="item__platform">
                     <img src="./assets/images/icon-${item.platform}.svg" alt="${item.platform} logo"></span>
                     <span>${item.userName}</span>
-                </section>
-                <section class="item__count flex-center-column">
+                </div>
+                <div class="item__count flex-center-column">
                     <div>${count}</div>
-                    <h1>${item.description}</h1>
-                </section>
-                <section class="item__change change--${delta}">
-                    <img src="./assets/images/icon-${delta}.svg"></img>${change}
+                    <h2>${item.description}</h2>
+                </div>
+                <div class="item__change change--${delta}">
+                    <img src="./assets/images/icon-${delta}.svg" alt="${delta} arrow"></img>${change}
                     Today
-                </section>
+                </div>
             <div>
         </article>`
     

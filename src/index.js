@@ -49,10 +49,10 @@ buttonToggle.addEventListener('click', () => {
 
     if (darkTheme) {
         buttonToggle.classList.add('dark')
-        htmlElement.setAttribute("theme", "dark");
+        htmlElement.setAttribute("data-theme", "dark");
     } else if (!darkTheme) {
         buttonToggle.classList.remove('dark')
-        htmlElement.setAttribute("theme", "light");
+        htmlElement.setAttribute("data-theme", "light");
     }
 });
 
@@ -70,7 +70,7 @@ const followersSection = getList(followersArray, 'followers');
 const overviewArticle = document.createElement('article');
 overviewArticle.classList += 'overview'
 const overviewList = getList(overviewArray, 'overview');
-overviewArticle.innerHTML = `<h1>Overview - Today</h1>`;
+overviewArticle.innerHTML = `<h2>Overview - Today</h2>`;
 overviewArticle.appendChild(overviewList);
 
 // render followers section and overview article to the DOM
