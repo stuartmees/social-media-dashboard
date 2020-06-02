@@ -12,6 +12,9 @@ header {
     .dash-header__rule {
         margin-top: 25px;
         margin-bottom: 10px;
+        height: 1px;
+        background-color: var(--text-emphasis-color);
+        border: none;
     }
 
     .dash-header__toggle {
@@ -61,6 +64,15 @@ header {
             font-size: $header-small-size;
             margin: 0;
         }
+    }
+}
+
+[theme="dark"] {
+    header {
+        .dash-header__rule {
+            background-color: var(--text-main-color);
+        }
+
     }
 }
 
