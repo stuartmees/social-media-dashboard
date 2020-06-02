@@ -31,20 +31,6 @@ h1 {
     margin: 5px;
 }
 
-.overview {
-    h1 {
-        font-size: $header-medium-size;
-    }
-}
-
-[theme="dark"] {
-    .overview {
-        h1 {
-            color: var(--text-emphasis-color);
-        }
-    }
-}
-
 
 @media only screen and (min-width: 680px) {
     .container {

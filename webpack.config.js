@@ -1,4 +1,7 @@
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 module.exports = {
+    plugins: [new MiniCssExtractPlugin()],
     // 1
     entry: './src/index.js',
     // 2
@@ -20,7 +23,7 @@ module.exports = {
             use: ['babel-loader'] //4a
           },{
               test: /\.s?css$/,
-              use: ['style-loader', 
+              use: [MiniCssExtractPlugin.loader, 
                     'css-loader',
                     'sass-loader'] //4b
           }
@@ -44,7 +47,8 @@ module.exports = {
 
 // 4a:  Tell webpack to compile js files using babel
 
-// 4b:  style-loader - loads the css into HTML.  
+// 4b:  (style-loader - loads the css into HTML. ) No longer used. See below. 
 //      css-loader - compiles css in js and bundles it.
 //      sass-loader - uses node-sass to convert scss to css
 //      ? - makese s in scss optional
+//      MiniCssExtractPlugin - loads the compiles css into a separate .css file so CSS can be loaded separately from JS for performance.

@@ -10,14 +10,14 @@ export const getOverviewItem = (item) => {
                     <h2>${item.description}</h2>
                 </div>
                 <div class="item__platform">
-                    <img src="/assets/images/icon-${item.platform}.svg" alt="${item.platform} logo"></span>
+                    <img src="./assets/images/icon-${item.platform}.svg" alt="${item.platform} logo"></span>
                 </div>
                 <div class="item__count">
                     <div>${count}</div>
                 </div>
                 <div class="item__change change--${delta}">
                     <div>
-                        <img src="/assets/images/icon-${delta}.svg"></img>${change}%
+                        <img src="./assets/images/icon-${delta}.svg"></img>${change}%
                     </div>
                 </div>
         </article>`

@@ -1,0 +1,15 @@
+.overview {
+    margin-top: 50px;
+
+    h1 {
+        font-size: $header-medium-size;
+    }
+}
+
+[theme="dark"] {
+    .overview {
+        h1 {
+            color: var(--text-emphasis-color);
+        }
+    }
+}
