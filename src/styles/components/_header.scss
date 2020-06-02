@@ -13,7 +13,7 @@ header {
         margin-top: 25px;
         margin-bottom: 10px;
         height: 1px;
-        background-color: var(--text-emphasis-color);
+        background-color: var(--hr-color);
         border: none;
     }
 
@@ -23,7 +23,7 @@ header {
         align-items: center;
 
         h2 {
-            color: var(--toggle-color);
+            color: var(--text-main-color);
         }
     };
     
@@ -67,14 +67,7 @@ header {
     }
 }
 
-[theme="dark"] {
-    header {
-        .dash-header__rule {
-            background-color: var(--text-main-color);
-        }
-
-    }
-}
+// s
 
 @media only screen and (min-width: 680px) {
     
@@ -84,7 +77,7 @@ header {
                 padding-top: 60px;
         }
 
-        .dash-header {
+        &.dash-header {
     
             .container {
                 display: flex;
@@ -94,6 +87,7 @@ header {
                 .dash-header__toggle {
                     h2 {
                         margin-right: 15px;
+                        color: var(--toggle-color);
                     }
                 }
                 
