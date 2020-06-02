@@ -4,7 +4,7 @@ import { getOverviewItem } from './overviewItem'
 
 export function getList(dataArray, listType) {
     
-    const list = document.createElement('section');
+    const list = document.createElement('div');
     list.className = `${listType}-list list  list__grid`;
 
     
